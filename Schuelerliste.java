@@ -11,7 +11,11 @@ public class Schuelerliste{
 	
 	public void fillListRandom(){
 		for (int i = 0; i<10; i++) {
-			schuelerListe.append();
+			Addresse wohnort = new Addresse();
+			wohnort.setAddresse(53721, "Loewenburgstr", 10);
+			Klasse myKlasse = new Klasse();
+			myKlasse.setNewKlasse(5, 'a');
+			schuelerListe.append(new Schueler(Namen.newName(zufall.nextInt(2)), Namen.newNachname(), wohnort, myKlasse));
 		}
 	}
 	
