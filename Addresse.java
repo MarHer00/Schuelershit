@@ -2,22 +2,26 @@ public class Addresse{
 	int plz;// Test hinzufuegen ob wirklihc nur 5 stellig
 	String strasse;
 	int hausnummer;// ggf. neuen Datentyp Hausnummer hinzufuegen, der hausnummer und Addresszusatz vereint
-	char addresszusatz = -1;
+	char addresszusatz;
 	
-	public void Addresse(int pPlz, String pStrasse, int pHausnummer, char pAddresszusatz) {
+	public void Addresse() {
+		
+	}
+	
+	// ab hier setter
+	public void setAddresse(int pPlz, String pStrasse, int pHausnummer, char pAddresszusatz) {
 		plz = pPlz;
 		strasse = pStrasse;
 		hausnummer = pHausnummer;
 		addresszusatz = pAddresszusatz;
 	}
 	
-	public void Addresse(int pPlz, String pStrasse, int pHausnummer) {
+	public void setAddresse(int pPlz, String pStrasse, int pHausnummer) {
 		plz = pPlz;
 		strasse = pStrasse;
 		hausnummer = pHausnummer;
 	}
 	
-	// ab hier setter
 	public void setPlz(int pPlz) {
 		plz = pPlz;
 	}
@@ -52,11 +56,10 @@ public class Addresse{
 	}
 	
 	public String toString() {
-		if(addresszusatz == -1) {
-			return ("" + plz\n + strasse + " " + hausnummer);
-
+		if(addresszusatz == '\0') {
+			return ("" + plz + " " + strasse + " " + hausnummer);
 		}else {
-			return ("" + plz \n + strasse + " " + hausnummer + addresszusatz);
+			return ("" + plz + " " + strasse + " " + hausnummer + addresszusatz);
 		}
 	}
 }
