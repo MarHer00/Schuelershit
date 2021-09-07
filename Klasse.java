@@ -24,4 +24,8 @@ public class Klasse{
 	public char getKlasse() {
 		return klasse;
 	}
+	
+	public String toString() {
+		return ("" + stufe + klasse);
+	}
 }
