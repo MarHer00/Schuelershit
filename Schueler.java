@@ -1,13 +1,16 @@
 public class Schueler{
 	String vorName;
 	String nachName;
+	int alter;
 	Addresse wohnort;
 	Klasse klasse;
-	
-	public void Schueler(String pVorName, String pNachName, Addresse pWohnort) {
+
+	public Schueler(String pVorName, String pNachName, int pAlter, Addresse pWohnort, Klasse pKlasse) {
 		vorName = pVorName;
 		nachName = pNachName;
+		alter = pAlter;
 		wohnort = pWohnort;
+		klasse = pKlasse;
 	}
 	
 	//ab hier setter 
@@ -76,11 +79,11 @@ public class Schueler{
 		return klasse.getStufe();
 	}
 	
-	public void getKlasse() {
+	public int getKlasse() {
 		return klasse.getStufe();
 	}
 	
 	public String toString() {
-		return (vorName + " " + nachName + ""\n + wohnort.toString());
+		return (klasse.toString() + " " + vorName + " " + nachName + " " + alter + " " + wohnort.toString());
 	} 
 }
