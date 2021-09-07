@@ -15,7 +15,7 @@ public class Schuelerliste{
 			wohnort.setAddresse(53721, "Loewenburgstr", 10);
 			Klasse myKlasse = new Klasse();
 			myKlasse.setNewKlasse(5, 'a');
-			schuelerListe.append(new Schueler(Namen.newName(zufall.nextInt(2)), Namen.newNachname(), wohnort, myKlasse));
+			schuelerListe.append(new Schueler(Namen.newName(zufall.nextInt(2)+1), Namen.newNachname(), zufall.nextInt(2)+11,  wohnort, myKlasse));// String, String, Int, Addresse, Klasse
 		}
 	}
 	
