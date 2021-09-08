@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Namen{
 	Random zufall = new Random();
-	String[] vornameF = {"Svenja", "Stefanie", "Leonie", "Teresa", "Johanna"};
+	String[] vornameF = {"Svenja", "Stefanie", "Leonie", "Teresa", "Johanna", "Luisa", "Lena", "Lea", "Maya", "Marina", "Milena", "Melina", "Sonja", "Birgitt", ""};
 	String[] vornameM = {"Felix", "Stefan", "Theodor", "Phillip", "Max"};
 	String[] nachname = {"Mueller", "Mayer", "Schmitz", "Schulz", "Weber"};
 	
@@ -13,7 +13,7 @@ public class Namen{
 		}else if (gender == 2) {
 			return vornameM[zufall.nextInt(vornameM.length)];
 		}else {
-			throw new RuntimeException("unknown Gender");
+			return Namen.newName(zufall.nextInt(2)+1);
 		}
 	}
 	
