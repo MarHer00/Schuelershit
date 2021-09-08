@@ -13,7 +13,7 @@ public class Namen{
 		}else if (gender == 2) {
 			return vornameM[zufall.nextInt(vornameM.length)];
 		}else {
-			return Namen.newName(zufall.nextInt(2)+1);
+			return newName(zufall.nextInt(2)+1);
 		}
 	}
 	
