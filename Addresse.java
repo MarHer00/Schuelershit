@@ -10,20 +10,32 @@ public class Addresse{
 	
 	// ab hier setter
 	public void setAddresse(int pPlz, String pStrasse, int pHausnummer, char pAddresszusatz) {
-		plz = pPlz;
+		if (pPlz<10000) {//Postleitzahlen sind niemals 6 stellig, sondern maximal fünfstellig
+			plz = pPlz;
+		}else {
+			throw new RuntimeException("plz too long");
+		}
 		strasse = pStrasse;
 		hausnummer = pHausnummer;
 		addresszusatz = pAddresszusatz;
 	}
 	
 	public void setAddresse(int pPlz, String pStrasse, int pHausnummer) {
-		plz = pPlz;
+		if (pPlz<10000) {//Postleitzahlen sind niemals 6 stellig, sondern maximal fünfstellig
+			plz = pPlz;
+		}else {
+			throw new RuntimeException("plz too long");
+		}
 		strasse = pStrasse;
 		hausnummer = pHausnummer;
 	}
 	
 	public void setPlz(int pPlz) {
-		plz = pPlz;
+		if (pPlz<10000) {//Postleitzahlen sind niemals 6 stellig, sondern maximal fünfstellig
+			plz = pPlz;
+		}else {
+			throw new RuntimeException("plz too long");
+		}
 	}
 	
 	public void setStrasse(String pStrasse) {
